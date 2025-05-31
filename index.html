@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Tejas Patel — Portfolio</title>
+
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome 5.15.4 CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Devicon (for multi‐color logos) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body class="bg-black text-white font-sans">
+    <!-- ====== HERO SECTION WITH PARTICLES ====== -->
+    <section
+      id="hero"
+      class="relative h-screen flex flex-col items-center justify-start pt-24 px-4"
+    >
+      <!-- Particles.js container (clicks pass through) -->
+      <div
+        id="particles-js"
+        class="absolute inset-0 -z-10 pointer-events-none"
+      ></div>
+
+      <!-- HEADER CONTENT WRAPPER -->
+      <div class="w-full">
+        <!-- NAME -->
+        <h1 class="text-6xl font-extrabold mb-2 text-center">Tejas Patel</h1>
+
+        <!-- MAJOR/AFFILIATION -->
+        <p class="text-xl mb-4 text-center" style="color: #DC143C;">
+          Statistics and Machine Learning @ Carnegie Mellon University
+        </p>
+
+        <!-- CONTACT ICONS -->
+        <div class="flex justify-center space-x-8 text-gray-400 mb-12">
+          <a
+            href="mailto:tpatel@andrew.cmu.edu"
+            class="hover:text-white transition-colors duration-150"
+            aria-label="Email Tejas"
+          >
+            <i class="fas fa-envelope fa-lg"></i>
+          </a>
+          <a
+            href="https://github.com/tjpatel04"
+            target="_blank"
+            class="hover:text-white transition-colors duration-150"
+            aria-label="Tejas’s GitHub"
+          >
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/tejas-patel-3aa7b0254/"
+            target="_blank"
+            class="hover:text-white transition-colors duration-150"
+            aria-label="Tejas’s LinkedIn"
+          >
+            <i class="fab fa-linkedin fa-lg"></i>
+          </a>
+        </div>
+      </div>
+      <!-- END HEADER CONTENT WRAPPER -->
+
+      <!-- ====== SKILLS + PROJECTS + EXPERIENCE FLEX CONTAINER ====== -->
+      <div
+        class="flex-1 w-full px-4 flex flex-col
+               md:flex-row md:justify-between md:space-x-8
+               md:items-start"
+      >
+        <!-- SKILLS CARD (takes 1 unit of flex-grow) -->
+        <div
+          class="skills-card-container
+                 w-full md:w-1/3 max-w-lg mb-8 md:mb-0
+                 flex flex-col md:flex-1"
+        >
+          <div class="skills-card flex-1 flex flex-col justify-start pb-8">
+            <!-- Skills Header -->
+            <div class="skills-header">
+              <i class="fas fa-bolt"></i>
+              <h2 class="ml-2">Skills</h2>
+            </div>
+
+            <!-- Skills Tab Buttons -->
+            <div class="skills-tabs mt-4">
+              <button class="tab-button active" data-tab="languages">
+                Languages
+              </button>
+              <button class="tab-button" data-tab="technologies">
+                Technologies
+              </button>
+            </div>
+
+            <!-- Languages Pane -->
+            <div class="skills-content" id="languages">
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4 mt-4">
+                <div class="skill-pill python">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                    alt="Python"
+                    class="skill-img"
+                  />
+                  <span>Python</span>
+                </div>
+                <div class="skill-pill c-lang">
+                  <i class="devicon-c-plain colored text-[1rem]"></i>
+                  <span>C</span>
+                </div>
+                <div class="skill-pill java">
+                  <i class="devicon-java-plain colored text-[1rem]"></i>
+                  <span>Java</span>
+                </div>
+                <div class="skill-pill sql">
+                  <i class="fas fa-database text-[1rem]"></i>
+                  <span>SQL</span>
+                </div>
+                <div class="skill-pill javascript">
+                  <i class="devicon-javascript-plain colored text-[1rem]"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div class="skill-pill html">
+                  <i class="devicon-html5-plain colored text-[1rem]"></i>
+                  <span>HTML</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technologies Pane -->
+            <div class="skills-content hidden" id="technologies">
+              <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-2 gap-4 mt-4">
+                <div class="skill-pill git">
+                  <i class="fab fa-git-alt text-[1rem]"></i>
+                  <span>Git</span>
+                </div>
+                <div class="skill-pill pandas">
+                  <i class="devicon-pandas-original colored text-[1rem]"></i>
+                  <span>Pandas</span>
+                </div>
+                <div class="skill-pill numpy">
+                  <i class="devicon-numpy-original colored text-[1rem]"></i>
+                  <span>NumPy</span>
+                </div>
+                <div class="skill-pill azure">
+                  <i class="devicon-azure-plain colored text-[1rem]"></i>
+                  <span>Azure</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECTS CARD (white panels under header) -->
+        <div
+          class="projects-card-container
+                 w-full md:w-1/3 max-w-lg mb-8 md:mb-0
+                 flex flex-col md:flex-[2]"
+        >
+          <!-- Container stays transparent -->
+          <div class="flex-1 flex flex-col justify-start pb-8">
+            <!-- Projects Header (star icon) on dark background -->
+            <div class="skills-header">
+              <i class="fas fa-star"></i>
+              <h2 class="ml-2">Projects</h2>
+            </div>
+
+            <!-- Project Panel 1 -->
+            <div class="mt-4">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <!-- Thumbnail: Earth Day Bee Game (from Thumbnails/bee.png) -->
+                <img
+                  src="Thumbnails/bee2.png"
+                  alt="Earth Day Bee Game Thumbnail"
+                  class="w-full h-40 object-cover"
+                />
+
+                <!-- Content area: title, description, GitHub icon, and tech icon -->
+                <div class="p-4 flex flex-col justify-between h-32">
+                  <!-- Title + GitHub icon on same line -->
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-semibold text-gray-900">
+                      Earth Day Bee Game
+                    </h3>
+                    <a
+                      href="https://github.com/your-username/earth-day-bee-game"
+                      target="_blank"
+                      class="text-gray-700 hover:text-gray-900"
+                      aria-label="View Earth Day Bee Game on GitHub"
+                    >
+                      <i class="fab fa-github fa-lg"></i>
+                    </a>
+                  </div>
+                  <!-- Description -->
+                  <p class="mt-2 text-gray-700 text-sm">
+                    Bee player minigame inspired by Google’s Earth Day 2020 Doodle game.
+                  </p>
+                  <!-- Tech icon: Python only -->
+                  <div class="mt-2">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                      alt="Python"
+                      class="w-4 h-4"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project Panel 2 -->
+            <div class="mt-6">
+              <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                <img
+                    src="Thumbnails/sand.jpg"
+                    alt="Personal Website Thumbnail"
+                    class="w-full h-40 object-cover"
+                />
+
+                <!-- Content area: title, description, GitHub icon, and tech icons -->
+                <div class="p-4 flex flex-col justify-between h-32">
+                  <!-- Title + GitHub icon on same line -->
+                  <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-semibold text-gray-900">
+                      Personal Website
+                    </h3>
+                    <a
+                      href="https://github.com/your-username/personal-website"
+                      target="_blank"
+                      class="text-gray-700 hover:text-gray-900"
+                      aria-label="View Personal Website on GitHub"
+                    >
+                      <i class="fab fa-github fa-lg"></i>
+                    </a>
+                  </div>
+                  <!-- Description -->
+                  <p class="mt-2 text-gray-700 text-sm">
+                    This current website.
+                  </p>
+                  <!-- Tech icons: JavaScript and HTML -->
+                  <div class="mt-2 flex space-x-2">
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                      alt="JavaScript"
+                      class="w-4 h-4"
+                    />
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                      alt="HTML"
+                      class="w-4 h-4"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Project Panel 2 -->
+
+          </div>
+        </div>
+
+        <!-- EXPERIENCE CARD (white panels under header – smaller height) -->
+        <div
+          class="experience-card-container
+                 w-full md:w-1/3 max-w-lg
+                 flex flex-col md:flex-[2]"
+        >
+          <!-- Container stays transparent -->
+          <div class="flex-1 flex flex-col justify-start pb-8">
+            <!-- Experience Header (pencil icon) on dark background -->
+            <div class="skills-header">
+              <i class="fas fa-pencil-alt"></i>
+              <h2 class="ml-2">Experience</h2>
+            </div>
+
+            <!-- Experience Panel 1 -->
+<div class="mt-4">
+  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+    <!-- Content area: title, icon, dates, description, tech icons -->
+    <!-- Increased height from h-28 to h-40 to fit tech icons at bottom -->
+    <div class="p-4 flex flex-col justify-between h-40">
+      <!-- Title + Icon + Dates on same line -->
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <h4 class="text-xl font-semibold text-gray-900">
+            Telemetrix
+          </h4>
+          <img
+            src="Thumbnails/logo.jpg"
+            alt="Company Logo"
+            class="w-12 h-12 ml-2"
+          />
+        </div>
+        <span class="text-gray-700 text-sm">May 2025 - Current</span>
+      </div>
+      <p class="mt-2 text-gray-700 text-sm">
+        Software Engineer Intern working on Fullstack and AI/ML teams.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4">
+  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+    <!-- Content area: title, icon, dates, description, tech icons -->
+    <!-- Increased height from h-28 to h-40 to fit tech icons at bottom -->
+    <div class="p-4 flex flex-col justify-between h-40">
+      <!-- Title + Icon + Dates on same line -->
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <h4 class="text-xl font-semibold text-gray-900">
+            Mok Sports
+          </h4>
+          <img
+            src="Thumbnails/mok.jpg"
+            alt="Company Logo"
+            class="w-8 h-8 ml-2"
+          />
+        </div>
+        <span class="text-gray-700 text-sm">April 2025 - Current</span>
+      </div>
+      <p class="mt-2 text-gray-700 text-sm">
+        Backend Engineer working to develop a fantasy sports platform.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-4">
+  <div class="bg-white rounded-lg shadow-md overflow-hidden">
+    <!-- Content area: title, icon, dates, description, tech icons -->
+    <!-- Increased height from h-28 to h-40 to fit tech icons at bottom -->
+    <div class="p-4 flex flex-col justify-between h-40">
+      <!-- Title + Icon + Dates on same line -->
+      <div class="flex justify-between items-center">
+        <div class="flex items-center">
+          <h4 class="text-xl font-semibold text-gray-900">
+            Viatris
+          </h4>
+          <img
+            src="Thumbnails/viatris.jpeg"
+            alt="Company Logo"
+            class="w-10 h-10 ml-2"
+          />
+        </div>
+        <span class="text-gray-700 text-sm">June 2024 - August 2024</span>
+      </div>
+      <p class="mt-2 text-gray-700 text-sm">
+        Research and Analytics Intern on the sustainability team.
+      </p>
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+        <!-- ====== END EXPERIENCE CARD ====== -->
+      </div>
+      <!-- ====== END SKILLS + PROJECTS + EXPERIENCE FLEX CONTAINER ====== -->
+    </section>
+
+    <!-- Particles.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- Initialize Particles.js -->
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 50,
+            density: { enable: true, value_area: 800 },
+          },
+          color: { value: "#ffffff" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#000000" },
+            polygon: { nb_sides: 5 },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: { enable: false, rotateX: 600, rotateY: 1200 },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true,
+          },
+          modes: {
+            grab: { distance: 400, line_linked: { opacity: 1 } },
+            bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+            repulse: { distance: 200, duration: 0.4 },
+            push: { particles_nb: 4 },
+            remove: { particles_nb: 2 },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+
+    <!-- JS to handle Skills tab toggling -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
